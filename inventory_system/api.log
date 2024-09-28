@@ -1,0 +1,47 @@
+INFO 2024-09-28 12:05:39,917 autoreload Watching for file changes with StatReloader
+WARNING 2024-09-28 12:08:09,792 log Unauthorized: /items/
+WARNING 2024-09-28 12:08:09,793 basehttp "GET /items/ HTTP/1.1" 401 183
+WARNING 2024-09-28 12:08:40,245 log Method Not Allowed: /login/
+WARNING 2024-09-28 12:08:40,246 basehttp "GET /login/ HTTP/1.1" 405 40
+INFO 2024-09-28 12:08:47,888 basehttp "POST /login/ HTTP/1.1" 200 483
+INFO 2024-09-28 12:09:05,912 basehttp "POST /login/ HTTP/1.1" 200 483
+WARNING 2024-09-28 12:09:11,618 log Bad Request: /items/
+WARNING 2024-09-28 12:09:11,618 basehttp "POST /items/ HTTP/1.1" 400 72
+INFO 2024-09-28 12:09:18,129 basehttp "GET /items/ HTTP/1.1" 200 371
+INFO 2024-09-28 12:23:36,775 autoreload Watching for file changes with StatReloader
+INFO 2024-09-28 12:23:43,711 basehttp "POST /register/ HTTP/1.1" 201 633
+ERROR 2024-09-28 12:23:52,766 log Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alokk\Desktop\Python_learning\DRF\project\inventory_system\inventory\views.py", line 29, in post
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST,ResponseMessage = "Something went wrong")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Response.__init__() got an unexpected keyword argument 'ResponseMessage'
+ERROR 2024-09-28 12:23:52,768 basehttp "POST /register/ HTTP/1.1" 500 93959
+INFO 2024-09-28 12:25:53,732 autoreload C:\Users\alokk\Desktop\Python_learning\DRF\project\inventory_system\inventory\views.py changed, reloading.
+INFO 2024-09-28 12:25:54,375 autoreload Watching for file changes with StatReloader
+INFO 2024-09-28 12:26:49,080 autoreload C:\Users\alokk\Desktop\Python_learning\DRF\project\inventory_system\inventory\views.py changed, reloading.
+INFO 2024-09-28 12:26:49,736 autoreload Watching for file changes with StatReloader
+WARNING 2024-09-28 12:26:51,559 log Bad Request: /register/
+WARNING 2024-09-28 12:26:51,560 basehttp "POST /register/ HTTP/1.1" 400 118
